@@ -1,0 +1,23 @@
+{
+  "name": "ai-gate",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db": "docker compose up -d",
+    "dev": "concurrently -k \"node server.js\" \"vite\"",
+    "server": "node server.js",
+    "client": "vite"
+  },
+  "dependencies": {
+    "embedded-postgres": "^18.4.0-beta.17",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^9.2.1",
+    "vite": "^6.3.5"
+  }
+}
